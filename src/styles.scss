@@ -1,0 +1,27 @@
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+
+  &.section {
+    margin-top: 12px;
+  }
+
+  [class*="col-"], [class*="col"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.truncate {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}

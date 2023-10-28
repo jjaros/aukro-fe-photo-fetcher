@@ -1,0 +1,13 @@
+.photos-list {
+  column-gap: 16px;
+  row-gap: 16px;
+  justify-content: center;
+
+  &>.col {
+    max-width: 367px;
+    height: 276px;
+    min-height: 276px;
+    max-height: 276px;
+    margin: 0
+  }
+}

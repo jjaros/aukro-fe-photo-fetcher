@@ -1,0 +1,7 @@
+<div class="row section">
+  <app-action-buttons-section (onFetchNewPhotos)="showMoreItems()" (onToggleGrayscale)="setGrayscalePhotos($event)" class="col-12"/>
+</div>
+
+<div class="row row-cols-1 row-cols-md-2 g-4 section photos-list">
+  <app-photo-fetcher-list-item [itemData]="item" *ngFor="let item of displayedItems" [grayscalePhoto]="grayscalePhotos" class="col"/>
+</div>

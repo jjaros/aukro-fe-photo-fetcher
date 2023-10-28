@@ -1,0 +1,46 @@
+$border-radius: 2px;
+
+.card {
+  border-radius: $border-radius;
+  //border-width: 0;
+
+  .card-img {
+    border-radius: $border-radius;
+    border-width: 0;
+
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    //flex-shrink: 0;
+
+    &.grayscale {
+      filter: grayscale(100%);
+    }
+  }
+
+  .card-img-overlay {
+    top: unset;
+    color: white;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 0 0 $border-radius $border-radius;
+
+    .card-title {
+      font-size: 16px;
+      margin: 0 0 3px;
+    }
+
+    .card-text {
+
+      & > a {
+        font-size: 14px;
+        color: gray;
+        text-decoration: none;
+
+        &:hover {
+          color: white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

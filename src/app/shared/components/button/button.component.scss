@@ -1,0 +1,14 @@
+$btn-primary-bg-color: #6948ce;
+
+.btn {
+  border-radius: 3px;
+
+  &.btn-primary {
+    background-color: $btn-primary-bg-color;
+    border-color: #8f7bcf;
+
+    &:hover {
+      background-color: darken($btn-primary-bg-color, 10%);
+    }
+  }
+}

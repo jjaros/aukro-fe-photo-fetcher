@@ -1,0 +1,29 @@
+$switch-color: #686868;
+$switch-color-rgba: rgba(104, 104, 104, 1);
+
+@mixin switcher-ball($color) {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='#{$color}'/%3e%3c/svg%3e")
+}
+
+.form-check-input {
+  background-color: $switch-color;
+  border-color: $switch-color;
+  height: 1.4em;
+  width: 2.5em;
+  @include switcher-ball(white);
+  cursor: pointer;
+
+  &:checked {
+    background-color: white;
+    @include switcher-ball($switch-color-rgba);
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.form-check-label {
+  vertical-align: middle;
+  margin-left: 16px;
+}

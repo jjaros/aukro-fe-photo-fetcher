@@ -1,0 +1,13 @@
+<div class="card h-100">
+  <img [src]="itemData.titleImageUrl" [alt]="itemData.itemName" class="card-img" [class.grayscale]="grayscalePhoto">
+  <div class="card-img-overlay">
+    <h5 class="card-title truncate">
+      {{itemData.itemName}}
+    </h5>
+    <p class="card-text truncate">
+      <a [href]="getItemLink()" target="_blank">
+        {{getItemLink()}}
+      </a>
+    </p>
+  </div>
+</div>

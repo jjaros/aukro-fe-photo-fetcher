@@ -1,0 +1,7 @@
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="grayscale-switcher" [checked]="checked"
+         (click)="onToggleChecked.emit(!checked)">
+  <label class="form-check-label" for="grayscale-switcher">
+    <ng-content></ng-content>
+  </label>
+</div>
