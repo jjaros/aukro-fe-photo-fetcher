@@ -1,10 +1,10 @@
-name: Deploy Site on push
+name: Build & Deploy
 on:
   workflow_dispatch
 jobs:
   web-deploy:
     name: Build & Deploy
-    runs-on: bullseye
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [18.x]
@@ -21,17 +21,12 @@ jobs:
       run: npm ci
     - name: Building the project
       run: npm run build
-    #- name: Copy .env
-    #  run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-    #- name: Install Dependencies
-    #  run: composer update --ignore-platform-reqs
-    #- name: Generate key
-    #  run: php artisan key:generate
     #- name: Set directory permissions
     #  run: chmod -R 777 storage bootstrap/cache
-    #- name: Upload files to shared hosting
-    #  uses: SamKirkland/FTP-Deploy-Action@4.0.0
-    #  with:
-    #    server: ${{ secrets.LARAVEL_SITE_SERVER}}
-    #    username: ${{ secrets.LARAVEL_SITE_USER}}
-    #    password: ${{ secrets.LARAVEL_SITE_PASS}}
+    - name: Upload files to shared hosting
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ${{ secrets.FTP_DEPLOY_HOST}}
+        username: ${{ secrets.FTP_DEPLOY_USER}}
+        password: ${{ secrets.FTP_DEPLOY_PASSWORD}}
+        server-dir: ${{ secrets.FTP_DEPLOY_BASE_PATH}}/aukro
