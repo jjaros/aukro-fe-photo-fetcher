@@ -1,4 +1,4 @@
-name: Deploy Site on push
+name: Build & Deploy
 on:
   workflow_dispatch
 jobs:
