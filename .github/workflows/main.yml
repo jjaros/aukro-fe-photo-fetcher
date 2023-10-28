@@ -29,4 +29,4 @@ jobs:
         server: ${{ secrets.FTP_DEPLOY_HOST}}
         username: ${{ secrets.FTP_DEPLOY_USER}}
         password: ${{ secrets.FTP_DEPLOY_PASSWORD}}
-        server-dir: ${{ secrets.FTP_DEPLOY_BASE_PATH}}/aukro
+        server-dir: ${{ secrets.FTP_DEPLOY_BASE_PATH}}/aukro/
