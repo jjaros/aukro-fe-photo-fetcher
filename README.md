@@ -5,6 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Zadání
 
+![Aukro FE photo-fetcher - UI specification](./aukro-photo-fetcher-ui.png)
+
 Programovací zadání má 2 části:
 - Část A: HTML + CSS
 - Část B: Typescript
